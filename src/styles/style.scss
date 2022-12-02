@@ -1,0 +1,246 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+
+//! ===> global
+
+body {
+  color: $textColor;
+  background-color: $bgColor;
+}
+
+.button-contained {
+  background-color: $textColor;
+  color: $bgColor;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  padding: 0 35px;
+  border-radius: 30px;
+  @include textSize(13px, bold);
+  box-shadow: 0px 4px 8px rgba(55, 125, 255, 0.5);
+}
+
+.button-outlined {
+  border: 1px solid $textColor;
+  color: $textColor;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  border-radius: 30px;
+  @include textSize(13px, bold);
+  transition: 0.3s all;
+
+  &:hover {
+    background-color: $textColor;
+    color: $bgColor;
+  }
+}
+
+.container {
+  padding: 0 20px;
+}
+
+//! ===> header
+
+.logo {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  p {
+    @include textSize(14px, bold);
+  }
+
+  span {
+    @include textSize(12px, normal);
+  }
+}
+
+.header-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.menu-mobile {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #383638;
+  padding: 10px 0;
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 60px;
+    @include textSize(25px, 600);
+
+    li {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+//! ===> hero section
+
+#hero {
+  margin-top: 50px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+  }
+
+  .title {
+    @include textSize(28px, 800);
+    line-height: 35px;
+  }
+
+  .description {
+    @include sectionDescription;
+  }
+}
+
+//! about section
+
+#about {
+  margin-top: 30px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .title {
+    @include sectionTitle;
+  }
+  .subtitle {
+    @include sectionSubtitle;
+  }
+  .description {
+    margin-top: 20px;
+    @include sectionDescription;
+  }
+
+  .btns {
+    margin: 35px 0 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .image {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+//! services section
+
+#services {
+  margin-top: 30px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .title {
+    @include sectionTitle;
+  }
+  .subtitle {
+    @include sectionSubtitle;
+  }
+  .description {
+    text-align: center;
+    margin-top: 10px;
+    @include sectionDescription;
+  }
+  .button {
+    display: flex;
+    gap: 7px;
+    @include textSize(14px, 700);
+    margin: 10px 0 0 20px;
+
+    svg {
+      transition: 0.5s all;
+    }
+    &:hover {
+      svg {
+        margin-left: 5px;
+      }
+    }
+  }
+  .boxs {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 0 60px 0;
+
+    & > div {
+      border: 1px solid #2e2e2e;
+      box-shadow: 0px 4px 8px rgba(39, 39, 39, 0.5);
+      width: 270px;
+      height: 270px;
+      border-radius: 30px;
+      transition: 0.3s all;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+
+      .image {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .text {
+        width: 120px;
+        @include textSize(17px, 700);
+      }
+
+      &:hover {
+        border: 1px solid rgb(76, 76, 76);
+        box-shadow: 0px 4px 8px rgba(46, 46, 46, 0.5);
+      }
+    }
+
+    @each $key, $value in (1: #e2e2e2, 2: #ff4646, 3: #8eea77, 4: #ffb31a) {
+      .box-#{$key} {
+        .image {
+          background-color: $value;
+        }
+      }
+    }
+  }
+}

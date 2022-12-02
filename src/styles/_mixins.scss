@@ -1,0 +1,20 @@
+@mixin textSize($textSize, $weight) {
+  font-size: $textSize;
+  font-weight: $weight;
+}
+
+@mixin sectionTitle {
+  text-align: center;
+  @include textSize(14px, 600);
+}
+
+@mixin sectionSubtitle {
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  @include textSize(24px, bold);
+}
+
+@mixin sectionDescription {
+  @include textSize(14px, normal);
+  line-height: 22px;
+}

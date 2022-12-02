@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Quicksand:wght@400;600;700&display=swap');
+
+*,
+:before,
+:after {
+  box-sizing: border-box;
+  -webkit-user-drag: none;
+  outline: none;
+}
+
+html {
+  touch-action: pan-x pan-y;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  max-width: 100vw;
+  line-height: 1.4;
+  font-size: 14px;
+  font-family: 'Quicksand', sans-serif;
+  overscroll-behavior: none;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo,
+    monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font: inherit;
+}
+
+small {
+  font-size: 85%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  line-height: 1;
+  cursor: pointer;
+  background-color: inherit;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: none;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+  font-size: 16px;
+  border: 0;
+  border-radius: 0;
+  background-clip: padding-box;
+  color: inherit;
+  background-color: transparent;
+}
+
+textarea {
+  resize: none;
+}
+
+label {
+  display: block;
+}
+
+fieldset {
+  border: 1px solid;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+th {
+  font-weight: inherit;
+}
+
+iframe {
+  border: 0;
+}
+
+menu {
+  margin: 0;
+  padding: 0;
+}
+
+form,
+figure,
+pre,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+address {
+  font: inherit;
+}
