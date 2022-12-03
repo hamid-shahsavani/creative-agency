@@ -39,7 +39,25 @@ body {
 }
 
 .container {
-  padding: 0 20px;
+  background-color: red;
+  width: 100%;
+  padding: 0 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $textColor;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(39, 39, 39);
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
 }
 
 //! ===> header
@@ -76,6 +94,7 @@ body {
   left: 0;
   right: 0;
   height: 100vh;
+  z-index: 1;
   overflow: hidden;
   background-color: #383638;
   padding: 10px 0;
@@ -103,7 +122,10 @@ body {
 
 #hero {
   margin-top: 50px;
-  .container {
+  position: relative;
+
+  .container,
+  .container > div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,9 +142,21 @@ body {
   .description {
     @include sectionDescription;
   }
+
+  .shape-red {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .shape-blue {
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+  }
 }
 
-//! about section
+//! ===> about section
 
 #about {
   margin-top: 30px;
@@ -157,10 +191,10 @@ body {
   }
 }
 
-//! services section
+//! ===> services section
 
 #services {
-  margin-top: 30px;
+  margin-top: 50px;
 
   .container {
     display: flex;
@@ -200,7 +234,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 40px;
-    margin: 40px 0 60px 0;
+    margin-top: 40px;
 
     & > div {
       border: 1px solid #2e2e2e;
@@ -242,5 +276,227 @@ body {
         }
       }
     }
+  }
+}
+
+//! ===> portfolio section
+
+#portfolio {
+  margin-top: 50px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .title {
+    @include sectionTitle;
+  }
+  .subtitle {
+    @include sectionSubtitle;
+  }
+  .description {
+    text-align: center;
+    margin-top: 10px;
+    @include sectionDescription;
+  }
+  .cards {
+    display: flex;
+    width: 100%;
+    margin: 25px 0;
+    .card {
+      position: relative;
+
+      .title {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        z-index: 2;
+        @include textSize(17px, bold);
+        transition: 0.5s all;
+      }
+
+      .image {
+        transition: 0.5s all;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 2px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(
+          180deg,
+          transparent 60%,
+          rgba(24, 24, 24, 0.9) 100%
+        );
+      }
+
+      &:hover {
+        .title {
+          color: #fff;
+        }
+        .image {
+          filter: brightness(0.8);
+        }
+      }
+    }
+  }
+}
+
+//! ===> testimonial section
+
+#testimonial {
+  margin-top: 50px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .title {
+    @include sectionTitle;
+  }
+  .subtitle {
+    @include sectionSubtitle;
+  }
+  .cards {
+    display: flex;
+    width: 100%;
+    margin-bottom: 25px;
+    justify-content: center;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 40px;
+
+    .body {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .name {
+        @include textSize(17px, 600);
+      }
+      .specialty {
+        @include textSize(11px, normal);
+      }
+    }
+
+    .content {
+      @include textSize(14px, normal);
+    }
+  }
+}
+
+//! ===> collaboration section
+
+#collaboration {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 70px;
+  }
+
+  .image {
+    margin: 30px 0 40px 0;
+  }
+  .title {
+    text-align: center;
+    @include textSize(28px, bold);
+    width: 340px;
+  }
+  .subtitle {
+    @include textSize(14px, normal);
+  }
+}
+
+//! ===> footer
+
+footer {
+  padding: 25px 0 13px 0;
+  background-color: #383638;
+
+  .logo {
+    background-color: $textColor;
+    width: 112px;
+    padding: 10px;
+    border-radius: 15px;
+
+    p,
+    span {
+      color: #1d1d1d;
+    }
+  }
+
+  .links {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    p {
+      color: #fff;
+      @include textSize(18px, bold);
+      margin-bottom: 5px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      transition: 0.3s all;
+      @include textSize(16px, normal);
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  .social-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 50px 0 20px 0;
+
+    .item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 36px;
+      height: 36px;
+      background-color: $textColor;
+      border-radius: 30px;
+    }
+  }
+
+  hr {
+    margin: 15px 0;
+    color: $textColor;
+  }
+
+  .copy-right {
+    text-align: center;
+    @include textSize(14px, normal);
+  }
+}
+
+//! ===> responsive - sm
+
+@include responsive(sm) {
+  .container {
+    max-width: 640px;
   }
 }

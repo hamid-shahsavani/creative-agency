@@ -18,3 +18,27 @@
   @include textSize(14px, normal);
   line-height: 22px;
 }
+
+@mixin responsive($size) {
+  @if ($size == sm) {
+    @media (min-width: 640px) and (max-width: 768px) {
+      @content;
+    }
+  } @else if ($size == md) {
+    @media (min-width: 768px) and (max-width: 1024px) {
+      @content;
+    }
+  } @else if ($size == lg) {
+    @media (min-width: 1024px) and (max-width: 1280px) {
+      @content;
+    }
+  } @else if ($size == xl) {
+    @media (min-width: 1280px) and (max-width: 1536px) {
+      @content;
+    }
+  } @else if ($size == 2xl) {
+    @media (min-width: 1536) {
+      @content;
+    }
+  }
+}

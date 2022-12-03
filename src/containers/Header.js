@@ -49,16 +49,16 @@ const Header = () => {
                 <nav>
                   <ul className="bottom">
                     <li>
-                      <Link href="#">Home</Link>
+                      <Link href="#" onClick={() => setIsShowMenuMobile(!isShowMenuMobile)}>Home</Link>
                     </li>
                     <li>
-                      <Link href="#about">About</Link>
+                      <Link href="#about" onClick={() => setIsShowMenuMobile(!isShowMenuMobile)}>About</Link>
                     </li>
                     <li>
-                      <Link href="#services">Services</Link>
+                      <Link href="#portfolio" onClick={() => setIsShowMenuMobile(!isShowMenuMobile)}>Portfolio</Link>
                     </li>
                     <li>
-                      <Link href="#projects">Projects</Link>
+                      <Link href="#testimonial" onClick={() => setIsShowMenuMobile(!isShowMenuMobile)}>Testimonial</Link>
                     </li>
                   </ul>
                 </nav>
