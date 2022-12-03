@@ -12,14 +12,14 @@
   }
 
   @media (min-width: 768px) {
-    @include textSize(20px, 600);
+    @include textSize(22px, 600);
   }
 
-  // @media (min-width: 1024px) and (max-width: 1280px) {
+  // @media (min-width: 1024px) {
   //   @include textSize(14px, 600);
   // }
   
-  // @media (min-width: 1280px) and (max-width: 1536px) {
+  // @media (min-width: 1280px) {
   //   @include textSize(14px, 600);
   // }
 
@@ -38,14 +38,14 @@
   }
 
   @media (min-width: 768px) {
-    @include textSize(36px, 800);
+    @include textSize(38px, 800);
   }
 
-  // @media (min-width: 1024px) and (max-width: 1280px) {
+  // @media (min-width: 1024px) {
   //   @include textSize(14px, 600);
   // }
   
-  // @media (min-width: 1280px) and (max-width: 1536px) {
+  // @media (min-width: 1280px) {
   //   @include textSize(14px, 600);
   // }
 
@@ -71,11 +71,11 @@
     line-height: 23px;
   }
 
-  // @media (min-width: 1024px) and (max-width: 1280px) {
+  // @media (min-width: 1024px) {
   //   @include textSize(14px, 600);
   // }
   
-  // @media (min-width: 1280px) and (max-width: 1536px) {
+  // @media (min-width: 1280px) {
   //   @include textSize(14px, 600);
   // }
 

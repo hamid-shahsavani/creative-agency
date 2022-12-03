@@ -579,6 +579,8 @@ footer {
   }
 
   #hero {
+    margin-top: 70px;
+
     .title {
       width: 400px;
     }
@@ -605,6 +607,10 @@ footer {
       grid-template-rows: repeat(2, 250px);
       gap: 30px;
     }
+
+    .button {
+      font-size: 15px;
+    }
   }
 
   #testimonial {
@@ -619,6 +625,9 @@ footer {
   #collaboration {
     .image {
       width: 470px;
+    }
+    .title {
+      width: 450px;
     }
   }
 
@@ -637,6 +646,8 @@ footer {
   }
 }
 
+//! ===> responsive - md
+
 @include responsive(md) {
   .container {
     max-width: 768px;
@@ -649,6 +660,37 @@ footer {
     
     .header-mobile {
       display: none;
+    }
+  }
+
+  #hero {
+    .title {
+      width: 500px;
+    }
+
+    .image {
+      width: 650px;
+    }
+  }
+
+  #about {
+    .image img {
+      width: 540px;
+    }
+  }
+
+  #collaboration {
+    .image {
+      width: 530px;
+    }
+    .title {
+      width: 500px;
+    }
+  } 
+
+  footer {
+    .logo-and-links {
+      gap: 80px;
     }
   }
 }
