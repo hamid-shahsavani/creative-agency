@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import shapeCircleBlue from "@/assets/images/shape-circle_blue.png";
 import shapeCircleRed from "@/assets/images/shape-circle_red.png";
-import mobileHeroSectionImage from "@/assets/images/m-heroSectionImage.png";
+import heroSectionImage from "@/assets/images/heroSectionImage.png";
 
 const HeroSection = () => {
   return (
@@ -22,7 +22,7 @@ const HeroSection = () => {
             <Image className="shape-red" src={shapeCircleRed} alt="" />
           </div>
         </div>
-        <Image src={mobileHeroSectionImage} width="330" alt="" />
+        <Image className="image" src={heroSectionImage} alt="" />
       </div>
     </section>
   );

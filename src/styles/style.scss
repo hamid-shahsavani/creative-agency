@@ -39,7 +39,6 @@ body {
 }
 
 .container {
-  background-color: red;
   width: 100%;
   padding: 0 10px;
   margin-right: auto;
@@ -66,6 +65,7 @@ body {
   margin-top: 10px;
   display: flex;
   gap: 8px;
+
   div {
     display: flex;
     flex-direction: column;
@@ -85,6 +85,40 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 10px 0;
+}
+
+.header-desktop {
+  display: none;
+  margin-top: 20px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  nav {
+    display: flex;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    a {
+      @include textSize(18px, normal);
+      transition: .3s all;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
 }
 
 .menu-mobile {
@@ -135,12 +169,17 @@ body {
   }
 
   .title {
-    @include textSize(28px, 800);
+    width: 340px;
+    @include sectionSubtitle;
     line-height: 35px;
   }
 
   .description {
     @include sectionDescription;
+  }
+
+  .image {
+    width: 360px;
   }
 
   .shape-red {
@@ -164,14 +203,18 @@ body {
   .container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
   }
+
   .title {
     @include sectionTitle;
   }
+
   .subtitle {
     @include sectionSubtitle;
   }
+
   .description {
     margin-top: 20px;
     @include sectionDescription;
@@ -188,6 +231,10 @@ body {
     margin-top: 10px;
     display: flex;
     justify-content: center;
+
+    img {
+      width: 300px;
+    }
   }
 }
 
@@ -199,19 +246,24 @@ body {
   .container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
   }
+
   .title {
     @include sectionTitle;
   }
+
   .subtitle {
     @include sectionSubtitle;
   }
+
   .description {
-    text-align: center;
     margin-top: 10px;
     @include sectionDescription;
+    text-align: left;
   }
+
   .button {
     display: flex;
     gap: 7px;
@@ -227,20 +279,19 @@ body {
       }
     }
   }
+
   .boxs {
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: 270px;
+    grid-template-rows: repeat(4, 270px);
+    gap: 20px;
     margin-top: 40px;
+    grid-template-columns: 2;
 
     & > div {
       border: 1px solid #2e2e2e;
       box-shadow: 0px 4px 8px rgba(39, 39, 39, 0.5);
-      width: 270px;
-      height: 270px;
       border-radius: 30px;
       transition: 0.3s all;
       display: flex;
@@ -290,17 +341,20 @@ body {
     align-items: center;
     gap: 10px;
   }
+
   .title {
     @include sectionTitle;
   }
+
   .subtitle {
     @include sectionSubtitle;
   }
+
   .description {
-    text-align: center;
     margin-top: 10px;
     @include sectionDescription;
   }
+
   .cards {
     display: flex;
     width: 100%;
@@ -361,23 +415,34 @@ body {
     align-items: center;
     gap: 10px;
   }
+
   .title {
     @include sectionTitle;
   }
+
   .subtitle {
     @include sectionSubtitle;
   }
+
   .cards {
     display: flex;
     width: 100%;
     margin-bottom: 25px;
     justify-content: center;
   }
+
+  .swiper-slide.swiper-slide-active {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  }
+
   .card {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding: 20px 40px;
+    padding: 20px 0;
+    width: 340px;
 
     .body {
       display: flex;
@@ -410,15 +475,18 @@ body {
   }
 
   .image {
+    width: 340px;
     margin: 30px 0 40px 0;
   }
+
   .title {
     text-align: center;
-    @include textSize(28px, bold);
+    @include sectionSubtitle;
     width: 340px;
   }
+
   .subtitle {
-    @include textSize(14px, normal);
+    @include sectionDescription;
   }
 }
 
@@ -440,8 +508,14 @@ footer {
     }
   }
 
+  .links-list {
+    display: grid;
+    grid-template-columns: repeat(1, 200px);
+    gap: 25px;
+    margin-top: 30px;
+  }
+
   .links {
-    margin: 30px 0;
     display: flex;
     flex-direction: column;
     gap: 7px;
@@ -459,8 +533,12 @@ footer {
       transition: 0.3s all;
       @include textSize(16px, normal);
 
-      &:hover {
-        color: #fff;
+      a {
+        transition: 0.5s all;
+        &:hover {
+          color: #fff
+          ;
+        }
       }
     }
   }
@@ -498,5 +576,79 @@ footer {
 @include responsive(sm) {
   .container {
     max-width: 640px;
+  }
+
+  #hero {
+    .title {
+      width: 400px;
+    }
+    .image {
+      width: 540px;
+    }
+  }
+
+  #about {
+    .image {
+      img {
+        width: 440px;
+      }
+    }
+  }
+
+  #services {
+    .button {
+      margin-left: 0;
+    }
+
+    .boxs {
+      grid-template-columns: repeat(2, 250px);
+      grid-template-rows: repeat(2, 250px);
+      gap: 30px;
+    }
+  }
+
+  #testimonial {
+    .card {
+      width: auto;
+      .content {
+        @include textSize(16px, normal);
+      }
+    }
+  }
+
+  #collaboration {
+    .image {
+      width: 470px;
+    }
+  }
+
+  footer {
+
+    .logo-and-links {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .links-list {
+      gap: 40px;
+      grid-template-columns: repeat(2, 200px);
+    }
+  }
+}
+
+@include responsive(md) {
+  .container {
+    max-width: 768px;
+  }
+
+  header {
+    .header-desktop {
+      display: block;
+    }
+    
+    .header-mobile {
+      display: none;
+    }
   }
 }

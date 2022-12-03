@@ -1,5 +1,5 @@
 import { HiOutlinePlay } from "react-icons/hi";
-import mobileAboutSectionImage from "@/assets/images/m-aboutSectionImage.png";
+import aboutSectionImage from "@/assets/images/aboutSectionImage.png";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -26,7 +26,7 @@ const AboutSection = () => {
           </div>
         </div>
         <div className="image">
-          <Image src={mobileAboutSectionImage} width="300" alt="" />
+          <Image src={aboutSectionImage} alt="" />
         </div>
       </div>
     </section>

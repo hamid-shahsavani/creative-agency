@@ -1,4 +1,4 @@
-import mobileCollaborationImage from "@/assets/images/m-collaborationSectionImage.png";
+import collaborationImage from "@/assets/images/collaborationSectionImage.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,8 +8,7 @@ const CollaborationSection = () => {
       <div className="container">
         <Image
           className="image"
-          src={mobileCollaborationImage}
-          width="340"
+          src={collaborationImage}
           alt=""
         />
         <p className="title">Interesting Collaboration With Us?</p>

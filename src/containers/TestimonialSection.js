@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { Autoplay } from "swiper";
 import tesimonialProfile from "@/assets/images/testimonial-profile.png";
 import Image from "next/image";
 
@@ -13,8 +14,24 @@ const TestimonialSection = () => {
           <Swiper
             initialSlide={1}
             spaceBetween={25}
-            centeredSlides={true}
-            slidesPerView={1}
+            slidesPerView={'auto'}
+            loop={true}
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 2500,
+            }}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+                centeredSlides: true,
+              },
+              640: {
+                slidesPerView: 2,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+            }}
           >
             <SwiperSlide>
               <div className="card">
@@ -26,7 +43,7 @@ const TestimonialSection = () => {
                   </div>
                 </div>
                 <p className="content">
-                  “ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit”
                 </p>
               </div>
@@ -41,7 +58,7 @@ const TestimonialSection = () => {
                   </div>
                 </div>
                 <p className="content">
-                  “ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  “consectetur adipiscing elit.
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit”
                 </p>
               </div>
@@ -56,8 +73,8 @@ const TestimonialSection = () => {
                   </div>
                 </div>
                 <p className="content">
-                  “ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit”
+                  “consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Lorem ipsum dolor sit amet”
                 </p>
               </div>
             </SwiperSlide>

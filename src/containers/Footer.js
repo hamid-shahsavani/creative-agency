@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="container">
-        <div>
+        <div className="logo-and-links">
           <div>
             <Link href="#" className="logo">
               <Image src={logo} alt="" />
@@ -20,7 +20,7 @@ const Footer = () => {
               </div>
             </Link>
           </div>
-          <div>
+          <div className="links-list">
             <div className="links">
               <p>Terms & policies</p>
               <ul>
@@ -63,19 +63,11 @@ const Footer = () => {
                 <li>
                   <Link href="#">PT Osiris Real Estate Internasional</Link>
                 </li>
-                <li>
-                  <Link href="#">Jl. KH. Wahid Hasyim Kel No.10D</Link>
-                </li>
-                <li>
-                  <Link href="#">Jakarta, Indonesia</Link>
-                </li>
-                <li>
-                  <Link href="#">team@OsirisRealEstate.com</Link>
-                </li>
               </ul>
             </div>
           </div>
-          <div className="social-items">
+        </div>
+        <div className="social-items">
             <Link className="item" href="#">
               <Image src={facebookIcon} width="20" height="20" alt="" />
             </Link>
@@ -92,7 +84,6 @@ const Footer = () => {
               <Image src={twitterIcon} width="20" height="20" alt="" />
             </Link>
           </div>
-        </div>
       </div>
       <hr />
       <div className="container">
