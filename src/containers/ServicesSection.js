@@ -10,9 +10,9 @@ const ServicesSection = () => {
   return (
     <section id="services">
       <div className="container">
-        <div>
+        <div className="content">
           <p className="title">Services</p>
-          <p className="subtitle">Our Teammate</p>
+          <p className="subtitle">Perfect and Fast Movement</p>
           <p className="description">
             We move with make a Creative Strategy for help your business goal,
             we help to improve your income by a services we have. make your

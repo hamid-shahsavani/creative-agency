@@ -1,6 +1,8 @@
 import portfolioCardOne from "@/assets/images/portfolio-card-1.png";
 import portfolioCardTwo from "@/assets/images/portfolio-card-2.png";
 import portfolioCardTree from "@/assets/images/portfolio-card-3.png";
+import shapeDotsPink from "@/assets/images/shape-dots_pink.png";
+import shapeDotsBlue from "@/assets/images/shape-dots_blue.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
 import "swiper/css";
@@ -18,8 +20,9 @@ const PortfolioSection = () => {
           comfortable, then can used by client from our business
         </p>
         <div className="cards">
+          <Image src={shapeDotsPink} alt="" className="shape-dots_pink" />
+          <Image src={shapeDotsBlue} alt="" className="shape-dots_blue" />
           <Swiper
-            initialSlide={1}
             spaceBetween={25}
             loop={true}
             modules={[Autoplay]}
@@ -36,8 +39,11 @@ const PortfolioSection = () => {
                 slidesPerView: 2,
               },
               768: {
-                slidesPerView: 2,
+                slidesPerView: 3,
               },
+              1280: {
+                slidesPerView: 4,
+              }
             }}
           >
             <SwiperSlide>
@@ -57,6 +63,13 @@ const PortfolioSection = () => {
             <SwiperSlide>
               <Link href="#" className="card">
                 <Image className="image" src={portfolioCardTree} alt="" />
+                <p className="title">Design Byte App</p>
+                <div className="overlay"></div>
+              </Link>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Link href="#" className="card">
+                <Image className="image" src={portfolioCardTwo} alt="" />
                 <p className="title">Design Byte App</p>
                 <div className="overlay"></div>
               </Link>

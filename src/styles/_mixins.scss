@@ -15,17 +15,13 @@
     @include textSize(22px, 600);
   }
 
-  // @media (min-width: 1024px) {
-  //   @include textSize(14px, 600);
-  // }
+  @media (min-width: 1024px) {
+    @include textSize(24px, 600);
+  }
   
-  // @media (min-width: 1280px) {
-  //   @include textSize(14px, 600);
-  // }
-
-  // @media (min-width: 1536px) {
-  //   @include textSize(14px, 600);
-  // }
+  @media (min-width: 1280px) {
+    @include textSize(25px, 600);
+  }
 }
 
 @mixin sectionSubtitle {
@@ -41,17 +37,19 @@
     @include textSize(38px, 800);
   }
 
-  // @media (min-width: 1024px) {
-  //   @include textSize(14px, 600);
-  // }
+  @media (min-width: 1024px) {
+    @include textSize(47px, 600);
+    line-height: 50px;
+  }
   
-  // @media (min-width: 1280px) {
-  //   @include textSize(14px, 600);
-  // }
+  @media (min-width: 1280px) {
+    @include textSize(60px, 600);
+    line-height: 70px;
+  }
 
-  // @media (min-width: 1536px) {
-  //   @include textSize(14px, 600);
-  // }
+  @media (min-width: 1536px) {
+    @include textSize(64px, 600);
+  }
 }
 
 @mixin sectionDescription {
@@ -71,17 +69,11 @@
     line-height: 23px;
   }
 
-  // @media (min-width: 1024px) {
-  //   @include textSize(14px, 600);
-  // }
-  
-  // @media (min-width: 1280px) {
-  //   @include textSize(14px, 600);
-  // }
-
-  // @media (min-width: 1536px) {
-  //   @include textSize(14px, 600);
-  // }
+  @media (min-width: 1024px) {
+    width: 590px;
+    @include textSize(20px, normal);
+    line-height: 27px;
+  }
 }
 
 @mixin responsive($size) {
@@ -102,7 +94,7 @@
       @content;
     }
   } @else if ($size == 2xl) {
-    @media (min-width: 1536) {
+    @media (min-width: 1536px) {
       @content;
     }
   }
