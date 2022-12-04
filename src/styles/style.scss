@@ -360,7 +360,8 @@ body {
     margin: 25px 0;
     position: relative;
 
-    .shape-dots_pink , .shape-dots_blue {
+    .shape-dots_pink,
+    .shape-dots_blue {
       display: none;
     }
 
@@ -663,6 +664,7 @@ footer {
 @include responsive(md) {
   .container {
     max-width: 768px;
+    padding: 0 30px;
   }
 
   header {
@@ -684,24 +686,25 @@ footer {
 
     .header-desktop {
       display: block;
+      li {
+        a {
+          position: relative;
 
-      a {
-        position: relative;
+          &:after {
+            position: absolute;
+            top: 0;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            content: "";
+            border-bottom: solid 2px #ffffff;
+            transform: scaleX(0);
+            transition: transform 0.4s ease-in-out;
+          }
 
-        &:after {
-          position: absolute;
-          top: 0;
-          bottom: -5px;
-          left: 0;
-          right: 0;
-          content: "";
-          border-bottom: solid 2px #ffffff;
-          transform: scaleX(0);
-          transition: transform 0.4s ease-in-out;
-        }
-
-        &:hover:after {
-          transform: scaleX(1);
+          &:hover:after {
+            transform: scaleX(1);
+          }
         }
       }
     }
@@ -737,7 +740,7 @@ footer {
         top: -170px;
         right: 30px;
       }
-  
+
       .shape-dots_blue {
         display: block;
         width: 90px;

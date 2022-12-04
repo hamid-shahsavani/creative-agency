@@ -43,12 +43,8 @@
   }
   
   @media (min-width: 1280px) {
-    @include textSize(60px, 600);
+    @include textSize(55px, 600);
     line-height: 70px;
-  }
-
-  @media (min-width: 1536px) {
-    @include textSize(64px, 600);
   }
 }
 
