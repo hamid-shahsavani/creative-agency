@@ -22,10 +22,10 @@ const AboutSection = () => {
               content look interesting and make people look for your business
             </p>
             <div className="btns">
-              <Link href="#" className="button-contained">
+              <Link href="/" className="button-contained">
                 Start Project
               </Link>
-              <Link href="#" className="button-outlined">
+              <Link href="/" className="button-outlined">
                 <HiOutlinePlay size={20} style={{ marginRight: 8 }} />
                 Courses
               </Link>

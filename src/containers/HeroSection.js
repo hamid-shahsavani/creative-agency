@@ -14,7 +14,7 @@ const HeroSection = () => {
             when you need us for improve your business, then come with us to
             help your business have reach it, you just sit and feel that goal.
           </p>
-          <Link href="#" className="button-contained">
+          <Link href="/" className="button-contained">
             Start Project
           </Link>
           <div>

@@ -10,7 +10,7 @@ const CollaborationSection = () => {
         <div className="content">
           <p className="title">Interesting Collaboration With Us?</p>
           <p className="subtitle">Help you to reach your business goal</p>
-          <Link href="#" className="button-contained">
+          <Link href="/" className="button-contained">
             Get Started
           </Link>
         </div>

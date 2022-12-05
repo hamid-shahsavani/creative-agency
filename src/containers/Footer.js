@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="container">
         <div className="logo-and-links">
           <div>
-            <Link href="#" className="logo">
+            <Link href="/" className="logo">
               <Image src={logo} alt="" />
               <div>
                 <p>Agency</p>
@@ -25,10 +25,10 @@ const Footer = () => {
               <p>Terms & policies</p>
               <ul>
                 <li>
-                  <Link href="#">Terms of Service</Link>
+                  <Link href="/">Terms of Service</Link>
                 </li>
                 <li>
-                  <Link href="#">Privacy Policy</Link>
+                  <Link href="/">Privacy Policy</Link>
                 </li>
               </ul>
             </div>
@@ -36,13 +36,13 @@ const Footer = () => {
               <p className="title">Company</p>
               <ul>
                 <li>
-                  <Link href="#">Home</Link>
+                  <Link href="/">Home</Link>
                 </li>
                 <li>
-                  <Link href="#">About Us</Link>
+                  <Link href="/">About Us</Link>
                 </li>{" "}
                 <li>
-                  <Link href="#">Contact Us</Link>
+                  <Link href="/">Contact Us</Link>
                 </li>
               </ul>
             </div>
@@ -50,10 +50,10 @@ const Footer = () => {
               <p className="title">Contact</p>
               <ul>
                 <li>
-                  <Link href="#">(+62) 893912392190</Link>
+                  <Link href="/">(+62) 893912392190</Link>
                 </li>
                 <li>
-                  <Link href="#">agecnycr@gmail.com</Link>
+                  <Link href="/">agecnycr@gmail.com</Link>
                 </li>
               </ul>
             </div>
@@ -61,26 +61,26 @@ const Footer = () => {
               <p className="title">Location</p>
               <ul>
                 <li>
-                  <Link href="#">PT Osiris Real Estate Internasional</Link>
+                  <Link href="/">PT Osiris Real Estate Internasional</Link>
                 </li>
               </ul>
             </div>
           </div>
         </div>
         <div className="social-items">
-            <Link className="item" href="#">
+            <Link className="item" href="/">
               <Image src={facebookIcon} width="20" height="20" alt="" />
             </Link>
-            <Link className="item" href="#">
+            <Link className="item" href="/">
               <Image src={instagramIcon} width="20" height="20" alt="" />
             </Link>
-            <Link className="item" href="#">
+            <Link className="item" href="/">
               <Image src={linkedinIcon} width="20" height="20" alt="" />
             </Link>
-            <Link className="item" href="#">
+            <Link className="item" href="/">
               <Image src={mailIcon} width="20" height="20" alt="" />
             </Link>
-            <Link className="item" href="#">
+            <Link className="item" href="/">
               <Image src={twitterIcon} width="20" height="20" alt="" />
             </Link>
           </div>

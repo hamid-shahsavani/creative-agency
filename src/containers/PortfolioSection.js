@@ -47,28 +47,28 @@ const PortfolioSection = () => {
             }}
           >
             <SwiperSlide>
-              <Link href="#" className="card">
+              <Link href="/" className="card">
                 <Image className="image" src={portfolioCardOne} alt="" />
                 <p className="title">Design Furniture App</p>
                 <div className="overlay"></div>
               </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <Link href="#" className="card">
+              <Link href="/" className="card">
                 <Image className="image" src={portfolioCardTwo} alt="" />
                 <p className="title">Cloud App</p>
                 <div className="overlay"></div>
               </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <Link href="#" className="card">
+              <Link href="/" className="card">
                 <Image className="image" src={portfolioCardTree} alt="" />
                 <p className="title">Design Byte App</p>
                 <div className="overlay"></div>
               </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <Link href="#" className="card">
+              <Link href="/" className="card">
                 <Image className="image" src={portfolioCardTwo} alt="" />
                 <p className="title">Design Byte App</p>
                 <div className="overlay"></div>
@@ -76,7 +76,7 @@ const PortfolioSection = () => {
             </SwiperSlide>
           </Swiper>
         </div>
-        <Link href="#" className="button-outlined btn">
+        <Link href="/" className="button-outlined btn">
           See All Portfolio
         </Link>
       </div>

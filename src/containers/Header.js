@@ -12,7 +12,7 @@ const Header = () => {
       <div className="container">
         <div className="header-mobile">
           <div className="header-mobile_left">
-            <Link href="#" className="logo">
+            <Link href="/" className="logo">
               <Image src={logo} alt="" />
               <div>
                 <p>Agency</p>
@@ -30,7 +30,7 @@ const Header = () => {
         </div>
         <div className="header-desktop">
           <div className="container">
-            <Link href="#" className="logo">
+            <Link href="/" className="logo">
               <Image src={logo} alt="" />
               <div>
                 <p>Agency</p>
@@ -40,7 +40,7 @@ const Header = () => {
             <nav>
               <ul>
                 <li>
-                  <Link href="#">Home</Link>
+                  <Link href="/">Home</Link>
                 </li>
                 <li>
                   <Link href="#about">About</Link>
@@ -53,7 +53,7 @@ const Header = () => {
                 </li>
               </ul>
             </nav>
-            <Link href="#" className="button-outlined">
+            <Link href="/" className="button-outlined">
               Contact us
             </Link>
           </div>
@@ -62,7 +62,7 @@ const Header = () => {
           <div className="menu-mobile">
             <div className="container">
               <div className="top">
-                <Link href="#" className="logo">
+                <Link href="/" className="logo">
                   <Image src={logo} alt="" />
                   <div>
                     <p>Agency</p>
@@ -80,7 +80,7 @@ const Header = () => {
                   <ul className="bottom">
                     <li>
                       <Link
-                        href="#"
+                        href="/"
                         onClick={() => setIsShowMenuMobile(!isShowMenuMobile)}
                       >
                         Home

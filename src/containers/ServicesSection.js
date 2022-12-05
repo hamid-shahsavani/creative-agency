@@ -18,7 +18,7 @@ const ServicesSection = () => {
             we help to improve your income by a services we have. make your
             content look interesting and make people look for your business!
           </p>
-          <Link href="#" className="button">
+          <Link href="/" className="button">
             <p>Read More</p>
             <HiOutlineArrowRight size={20} />
           </Link>
